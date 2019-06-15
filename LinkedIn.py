@@ -1,7 +1,7 @@
-from Secret import get_linkedin_token
+from Secret import get_linkedIn_token
 from linkedin import linkedin
 
-APPLICATION_KEY, APPLICATION_SECRET, RETURN_URL = get_linkedin_token()
+APPLICATION_KEY, APPLICATION_SECRET, RETURN_URL = get_linkedIn_token()
 
 auth = linkedin.LinkedInAuthentication(APPLICATION_KEY, APPLICATION_SECRET, RETURN_URL)
 auth.authorization_code = input("Manually input the code after '?code=...' in\n{}\nHere: ".format(auth.authorization_url))
